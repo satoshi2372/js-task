@@ -9,32 +9,28 @@
 
   <script>
     'use strict'
-
+    //js課題３
     {
-      //js課題３
       const taskList = [
-        '====================\n',
-        '現在待っているタスク一覧\n',
-        '====================\n',
-        '0 : 掃除\n',
-        '1 : 買い物\n',
-        '2 : 散歩'
+        '====================',
+        '現在待っているタスク一覧',
+        '====================',
+        '0 : 掃除',
+        '1 : 買い物',
+        '2 : 散歩',
       ]
       console.log(taskList);
-      function task() {
+
+      const taskPlus = [...taskList];
+      function plus() {
         let taskText = window.prompt('タスクを入力してください');
-        window.alert('新しいタスクを入力しました');
-        taskList.push(taskText);
-        console.log(taskList);
+        taskPlus.push(`4 : ${taskText}`);
+        console.log(taskPlus);
+        window.alert('新しいタスクを追加しました。');
       }
-      task();
+      plus();
       window.prompt('「確認,追加,削除,終了」の４つのいずれかを入力してください');
-
-
     }
-
-
-
   </script>
 </body>
 </html>
