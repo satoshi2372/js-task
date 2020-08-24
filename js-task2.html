@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    'use strict';
+    let name = window.prompt('日本の首都は？');
+
+    while (name !== null) {
+      if (name === '東京') {
+        window.alert('正解');
+      } else if (name !== '東京') {
+        window.alert('不正解');
+      }
+      name = window.prompt('日本の首都は？');
+      continue;
+    }
+
+
+  </script>
+</body>
+</html>

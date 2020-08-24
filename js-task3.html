@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    'use strict'
+
+    {
+      const taskList = [
+        '====================\n',
+        '現在待っているタスク一覧\n',
+        '====================\n',
+        '0 : 掃除\n',
+        '1 : 買い物\n',
+        '2 : 散歩'
+      ]
+      console.log(taskList);
+      function task() {
+        let taskText = window.prompt('タスクを入力してください');
+        window.alert('新しいタスクを入力しました');
+        taskList.push(taskText);
+        console.log(taskList);
+      }
+      task();
+      window.prompt('「確認,追加,削除,終了」の４つのいずれかを入力してください');
+
+
+    }
+
+
+
+  </script>
+</body>
+</html>
