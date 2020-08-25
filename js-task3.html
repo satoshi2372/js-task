@@ -19,16 +19,19 @@
         '1 : 買い物',
         '2 : 散歩',
       ]
-      console.log(taskList);
+      //forEachで引数taskListの配列内の値を繰り返し出力する
+      taskList.forEach((taskList) => {
+        console.log(taskList);
+      });
 
-      const taskPlus = [...taskList];
-      function plus() {
-        let taskText = window.prompt('タスクを入力してください');
-        taskPlus.push(`4 : ${taskText}`);
-        console.log(taskPlus);
-        window.alert('新しいタスクを追加しました。');
-      }
-      plus();
+      const addTask = [...taskList];
+      let taskText = window.prompt('タスクを入力してください');
+      window.alert('新しいタスクを追加しました。');
+      addTask.push(`4 : ${taskText}`);
+      addTask.forEach((addTask) => {
+        console.log(addTask);
+      });
+
       window.prompt('「確認,追加,削除,終了」の４つのいずれかを入力してください');
     }
   </script>
