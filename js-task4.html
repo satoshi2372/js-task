@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    'use strict'
+    //js課題4
+    {
+      const taskList = [
+        '======================',
+        '現在待っているタスク一覧',
+        '======================',
+        '0 : [内容]机を片付ける、[ジャンル]掃除',
+        '1 : [内容]牛乳を買う、[ジャンル]買い物',
+        '2 : [内容]散歩する、[ジャンル]運動',
+      ]
+      //forEachで引数taskListの配列内の値を繰り返し出力する
+      taskList.forEach((taskList) => {
+        console.log(taskList);
+      });
+
+      const addTaskList = [...taskList];
+      let addTask = window.prompt('タスクを入力してください');
+      let addGenre = window.prompt('ジャンルを入力してください');
+      window.alert('新しいタスクを追加しました。');
+      addTaskList.push(`3 : [内容]${addTask}、[ジャンル]${addGenre}`);
+      addTaskList.forEach((addTaskList) => {
+        console.log(addTaskList);
+      });
+
+      window.prompt('「確認,追加,削除,終了」の４つのいずれかを入力してください');
+    }
+  </script>
+
+</body>
+</html>
