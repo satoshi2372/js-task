@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    'use strict';
+    {
+      const taskText = {
+        text: '======================\n現在待っているタスク一覧\n======================\n0 : [内容]机を片付ける、[ジャンル]掃除\n1 : [内容]牛乳を買う、[ジャンル]買い物\n2 : [内容]散歩する、[ジャンル]運動',
+      };
+      console.log(taskText.text);
+      const taskList = [
+        {
+          text: '======================\n現在待っているタスク一覧\n======================\n0 : [内容]机を片付ける、[ジャンル]掃除\n1 : [内容]牛乳を買う、[ジャンル]買い物\n2 : [内容]散歩する、[ジャンル]運動',
+        },
+        { index: '3' },
+        { addTask: window.prompt('タスクを入力してください') },
+        { addGenre: window.prompt('ジャンルを入力してください') },
+      ];
+      window.alert('新しいタスクを追加しました。')
+      console.log(`${taskList[0].text}\n${taskList[1].index} : [内容]${taskList[2].addTask}、[ジャンル]${taskList[3].addGenre}`);
+      window.prompt('「確認,追加,削除,終了」の４つのいずれかを入力してください');
+    }
+  </script>
+</body>
+</html>
