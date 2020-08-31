@@ -9,26 +9,51 @@
   <script>
     'use strict';
     {
-      const taskList = [
+      const taskText = [
         { text: '======================\n現在待っているタスク一覧\n======================' },
       ];
-      const tasks = [
-        { task: '0 : [内容]机を片付ける、[ジャンル]掃除', },
-        { task: '1 : [内容]牛乳を買う、[ジャンル]買い物', },
-        { task: '2 : [内容]散歩する、[ジャンル]運動', },
-      ];
-      taskList.push(tasks);
-      console.log(`${taskList[0].text}\n${taskList[1][0].task}\n${taskList[1][1].task}\n${taskList[1][2].task}`);
+      const taskList = [];
+      const task = {
+        task: '机を片付ける',
+        genre: '掃除',
+      };
+      const task1 = {
+        task: '牛乳を買う',
+        genre: '買い物',
+      };
+      const task2 = {
+        task: '散歩する',
+        genre: '運動',
+      };
+      taskList.push(task);
+      taskList.push(task1);
+      taskList.push(task2);
 
-      const addTask = {
-        index: '3 :',
-        task: `[内容]${window.prompt('タスクを入力してください')}､`,
-        genre: `[ジャンル]${window.prompt('ジャンルを入力してください')}`,
+      function showList() {
+        console.log(taskText[0].text);
+        for (let i = 0; i < 3; i++) {
+          console.log(`${i} : [内容]${taskList[i].task}、[ジャンル]${taskList[i].genre}`);
+        }
+      };
+      showList();
+
+      const addTaskList = [];
+      const addTask =
+      {
+        task: window.prompt('タスクを入力してください'),
+        genre: window.prompt('ジャンルを入力してください'),
       };
       window.alert('新しいタスクを追加しました。');
       taskList.push(addTask);
-      console.log(`${taskList[0].text}\n${taskList[1][0].task}\n${taskList[1][1].task}\n${taskList[1][2].task}`);
-      console.log(taskList[2].index, taskList[2].task, taskList[2].genre);
+
+      function showAddList() {
+        let n = taskList.length;
+        console.log(taskText[0].text);
+        for (let i = 0; i < n; i++) {
+          console.log(`${i} : [内容]${taskList[i].task}、[ジャンル]${taskList[i].genre}`);
+        }
+      }
+      showAddList();
       window.prompt('「確認,追加,削除,終了」の４つのいずれかを入力してください');
     }
   </script>
