@@ -13,34 +13,17 @@
       const taskText = [
         { text: '======================\n現在待っているタスク一覧\n======================' },
       ];
-      // 既存のタスクを追加
-      function tasksList() {
-        const taskList = [];
-        const task = {
-          task: '机を片付ける',
-          genre: '掃除',
-        };
-        const task1 = {
-          task: '牛乳を買う',
-          genre: '買い物',
-        };
-        const task2 = {
-          task: '散歩する',
-          genre: '運動',
-        };
-        taskList.push(task);
-        taskList.push(task1);
-        taskList.push(task2);
-        return taskList;
-      }
-      tasksList();
-      const taskList = tasksList();
+      // 既存のタスク一覧
+      const taskList = [
+        { task: '机を片付ける', genre: '掃除', },
+        { task: '牛乳を買う', genre: '買い物', },
+        { task: '散歩する', genre: '運動', },
+      ];
 
       //taskListを繰り返し処理で表示させる
       function showList(taskList) {
-        let n = taskList.length;
         console.log(taskText[0].text);
-        for (let i = 0; i < n; i++) {
+        for (let i = 0; i < taskList.length; i++) {
           console.log(`${i} : [内容]${taskList[i].task}、[ジャンル]${taskList[i].genre}`);
         }
       };
